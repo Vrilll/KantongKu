@@ -1,3 +1,5 @@
+![alt text](https://github.com/Vrilll/KantongKu/blob/main/kantongku.png?raw=true)
+
 # KantongKu - Aplikasi Budgeting
 
 ## Deskripsi

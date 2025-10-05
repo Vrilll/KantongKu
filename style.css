@@ -1,0 +1,287 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+    color: #333;
+    padding: 20px;
+}
+
+/* --- BARU: Styling untuk Header dengan Logo --- */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%);
+    color: white;
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Jarak antara logo dan teks */
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.header-text {
+    text-align: left;
+}
+
+header h1 {
+    margin-bottom: 0;
+    font-size: 2.2em;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+    margin-top: -5px;
+}
+/* --- Akhir Styling Header --- */
+
+main {
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 18px;
+    color: #2E7D32;
+    font-size: 1.5em;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#clear-filters {
+    background-color: #f44336;
+    margin-left: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+#clear-filters:hover {
+    background-color: #d32f2f;
+}
+
+.summary-box {
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #4CAF50;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.summary-box p {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+.balance {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #2E7D32;
+}
+
+.balance-negative {
+    color: #c62828;
+}
+
+#transactions-list {
+    list-style-type: none;
+}
+
+#no-transactions-message {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 20px;
+}
+
+.transaction-item {
+    background-color: #fafafa;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border-left: 5px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s;
+}
+
+.transaction-item:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.transaction-item.income {
+    border-left-color: #4CAF50;
+}
+
+.transaction-item.expense {
+    border-left-color: #f44336;
+}
+
+.transaction-details {
+    flex-grow: 1;
+}
+
+.transaction-details strong {
+    display: block;
+    color: #333;
+    font-size: 1.05em;
+}
+
+.transaction-details span {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.transaction-amount {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-left: 15px;
+    min-width: 100px;
+    text-align: right;
+}
+
+.income .transaction-amount {
+    color: #4CAF50;
+}
+
+.expense .transaction-amount {
+    color: #f44336;
+}
+
+.transaction-actions button {
+    margin-left: 8px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 18px;
+    padding: 15px;
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    border: 1px solid #d1e7ff;
+}
+
+.filters .form-group {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 0;
+}
+
+/* --- UPDATE: Penyempurnaan untuk Tampilan Mobile --- */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Kurangi padding body */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Kecilkan font judul */
+    }
+    .logo {
+        width: 40px; /* Kecilkan logo */
+        height: 40px;
+    }
+    
+    main {
+        padding: 15px; /* Kurangi padding konten utama */
+    }
+
+    h2 {
+        font-size: 1.3em; /* Kecilkan font sub-judul */
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters .form-group {
+        min-width: auto;
+    }
+
+    .transaction-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .transaction-amount {
+        align-self: flex-end; /* Pastikan jumlah tetap di kanan */
+        font-size: 1.2em;
+    }
+
+    .transaction-actions {
+        width: 100%;
+        text-align: right; /* Pindahkan tombol ke kanan */
+    }
+}
